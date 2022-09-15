@@ -143,7 +143,6 @@ const pistaNueva = document.querySelector('#newPista');
 function agregarPalabra(){
   const palabraAgregar = palabraNueva.value.toUpperCase();
   const pistaAgregar = pistaNueva.value;
-  let pistaDicho
   if (/^[A-Z]{3,8}$/g.test(palabraAgregar)) {
     palabraNueva.value = "";
     palabras.push(palabraAgregar);
