@@ -44,7 +44,7 @@ btnStart.addEventListener('click', () => {
 
 //btn - Nuevo juego
 btnReinicio.addEventListener('click', () =>{
-  iniciarJuego()
+  iniciarJuego();
   dibujarLinea();
 
 })
@@ -64,7 +64,7 @@ function iniciarJuego(){
   for (let i = 0; i < palabraSecreta.length; i++) {
     aciertos.push(" ");
   }
-  resetBtnes()
+  resetBtnes();
   dibujarCanvas();
   dibujarLinea();
   palabraVisible.innerHTML = " "
@@ -205,11 +205,3 @@ function nodeAlert(){
     
   });
 }
-
-document.addEventListener('keydown', (event) => {
-  var keyValue = event.key;
-  var codeValue = event.code;
-  if(tecla = keyValue){
-    accederTeclas
-  }
-}, false);
