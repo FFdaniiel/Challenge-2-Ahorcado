@@ -1,4 +1,4 @@
-const pantallaPrincipal = document.querySelector('.pantalla-principal')
+const pantallaPrincipal = document.querySelector('.pantalla-inicio')
 const pantallaJuego = document.querySelector('.pantalla-juego')
 const pantallaAgregar = document.querySelector('#pantallaAgregar')
 const contenedorPalabra = document.querySelector('#palabraSecreta')
