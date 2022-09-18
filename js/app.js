@@ -121,10 +121,10 @@ function resetBtnes() {
 function controlJuego(){
   if(contadorIntentos == intentosPosibles){
     palabraVisible.innerHTML = (`Perdiste, La palabra era: ${palabraSecreta}`);
-    aciertos = palabraSecreta
+    aciertos = aciertos.toString
     estadoPartida();
   }else{
-    if(aciertos.every((item) => item != " ")) {
+    if(aciertos.every((item) => item != " ") ) {
       palabraVisible.innerHTML = (`Felicidades ganaste!`);
       contadorIntentos = 0
       estadoPartida();
@@ -210,16 +210,18 @@ btnDesistir.addEventListener('click', () => {
   
 });
 
+function pulsarTecla(){
+  window.addEventListener(
+    "keydown",
+    function (e) {
+      letra = e.key.toUpperCase();
+      code = e.keyCode;
+      
+      accederTeclas(letra)
+      console.log(code)
+    },
+    false
+    );
+}
 
-window.addEventListener(
-  "keydown",
-  function (e) {
-    letra = e.key.toUpperCase();
-    code = e.keyCode;
-    
-    accederTeclas(letra)
-    
-  },
-  false
-  );
-
+pulsarTecla()
