@@ -58,10 +58,10 @@ audio{
     transition: all .3s ease-out;
 }
 .btnSecundario{
-    width: 100%;
+
     padding: 1rem;
     background: none;
-    border: .3rem solid var(--pink);
+    border: .2rem solid var(--pink);
 }
 .btnSecundario:hover{
     background: var(--pink);
