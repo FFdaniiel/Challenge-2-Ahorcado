@@ -20,7 +20,9 @@ html {
     box-sizing: inherit;
 }
 
-
+iframe{
+    display: none;
+}
 body{
     margin: 0;
     font-family: var(--fuenteGeneral);
@@ -33,13 +35,22 @@ audio{
     width: 13rem;
 }
 /* header */
-.container-logo{
+.header{
     padding: 2rem;
+    display: flex;
     justify-content: space-between;
-
 }
 
-
+.btnMusica {
+    padding: 1.3rem;
+    color: var(--celesteP);
+    background-color: var(--pinkClaro);
+    border-radius: 45%;
+    font-size: 3rem;
+}
+.fa-stop{
+    display: none;
+}
 /* main principal */
 .pantalla-inicio{
     margin: 0 auto;
@@ -58,7 +69,6 @@ audio{
     transition: all .3s ease-out;
 }
 .btnSecundario{
-
     padding: 1rem;
     background: none;
     border: .2rem solid var(--pink);

@@ -224,3 +224,30 @@ function pulsarTecla(){
     );
 }
 
+///musica
+//elementos seleccionados para la funcion
+window.addEventListener("load",function(){
+	document.querySelector(".fa-play").addEventListener("click",iniciarMusica);
+	document.querySelector(".fa-stop").addEventListener("click",pararMusica);			
+});
+
+//iniciar la musica
+function iniciarMusica(){
+  document.querySelector(".fa-play").style.display = 'none'
+  document.querySelector(".fa-stop").style.display = 'block'
+	let sonido = document.createElement("iframe");
+	sonido.setAttribute("src","audio/Naptime!.mp3");
+	document.body.appendChild(sonido);
+	document.querySelector(".fa-play").removeEventListener("click",iniciarMusica);
+}
+
+//para la musica
+function pararMusica(){
+  document.querySelector(".fa-stop").style.display = 'none'
+  document.querySelector(".fa-play").style.display = 'block'
+	let iframe = document.getElementsByTagName("iframe");   
+	if (iframe.length > 0){
+		iframe[0].parentNode.removeChild(iframe[0]);
+		document.querySelector(".fa-play").addEventListener("click",iniciarMusica);
+	}
+}
