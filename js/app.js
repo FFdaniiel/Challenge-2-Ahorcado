@@ -2,6 +2,7 @@ const pantallaPrincipal = document.querySelector('.pantalla-inicio')
 const pantallaJuego = document.querySelector('.pantalla-juego')
 const pantallaAgregar = document.querySelector('#pantallaAgregar')
 const contenedorPalabra = document.querySelector('#palabraSecreta')
+const guardarErrores = document.querySelector('.errores');
 const teclado = document.querySelector('.teclado');
 const palabraVisible = document.querySelector('#palabraSecreta')
 const pista = document.querySelector('#pista');
@@ -72,7 +73,6 @@ function iniciarJuego(){
   pista.textContent = palabras[posicionAleatoria + 1]
   
 }
-//
 
 
 //seleccionar teclas

@@ -41,7 +41,7 @@ audio{
 
 
 /* main principal */
-.pantalla-principal{
+.pantalla-inicio{
     margin: 0 auto;
     padding: 2rem;
     border-radius: 2rem;
@@ -75,22 +75,22 @@ audio{
     body{
         height: 100vh;
     }
-    .pantalla-principal{
+    .pantalla-inicio{
         width: 80%;
         font-size: 1.4rem;
     }
-    .pantalla-principal #btnStart:hover{
+    .pantalla-inicio #btnStart:hover{
         background: #cd9cf2;
         font-size: 1.5rem;
     }
-    .pantalla-principal .btnSecundario:hover{
+    .pantalla-inicio .btnSecundario:hover{
         background: var(--pink);
         font-size: 1.5rem;
     }
 }
 @media (min-width: 1024px) {
     
-    .pantalla-principal{
+    .pantalla-inicio{
         width: 50%;
         font-size: 1.4rem;
     }
