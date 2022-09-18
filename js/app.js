@@ -40,15 +40,15 @@ btnStart.addEventListener('click', () => {
   palabraVisible.style.display = 'block';
 
   iniciarJuego();
+  pulsarTecla()
 });
 
 //btn - Nuevo juego
 btnReinicio.addEventListener('click', () =>{
   iniciarJuego();
   dibujarLinea();
-
+  
 })
-
 
 
 //palabra secreta 
@@ -64,26 +64,32 @@ function iniciarJuego(){
   for (let i = 0; i < palabraSecreta.length; i++) {
     aciertos.push(" ");
   }
+  
   resetBtnes();
   dibujarCanvas();
   dibujarLinea();
   palabraVisible.innerHTML = " "
   pista.textContent = palabras[posicionAleatoria + 1]
-
+  
 }
-
+//
 
 
 //seleccionar teclas
 function accederTeclas(letra){
+
   let seleccionarTecla = document.querySelector(`#tecla${letra}`)
+  
+//
+
   if(palabraSecreta.includes(letra)){
     seleccionarTecla.classList.add('btnTrue');
     seleccionarTecla.disabled = true;
     for( let i = 0; i < palabraSecreta.length;i++){
-      if(palabraSecreta[i] == letra){
+      if(palabraSecreta[i] == letra ){
         
         aciertos[i] = letra;
+        
       }
 
     }
@@ -91,12 +97,16 @@ function accederTeclas(letra){
     seleccionarTecla.classList.add("disableBtn");
     seleccionarTecla.disabled = true;
     contadorIntentos++;
+    
+;
   }
   controlJuego()
   dibujarLinea();
   contadorAhorcado()
   console.log(letra, palabraSecreta, contadorIntentos, aciertos)
+  
 }
+
 function resetBtnes() {
   let buttons = document.querySelectorAll(".teclado  button");
     buttons.forEach((button) => {
@@ -111,14 +121,16 @@ function resetBtnes() {
 function controlJuego(){
   if(contadorIntentos == intentosPosibles){
     palabraVisible.innerHTML = (`Perdiste, La palabra era: ${palabraSecreta}`);
+    aciertos = palabraSecreta
     estadoPartida();
   }else{
     if(aciertos.every((item) => item != " ")) {
       palabraVisible.innerHTML = (`Felicidades ganaste!`);
-      nodeAlert();
+      contadorIntentos = 0
       estadoPartida();
     }
   }
+  
 };
 
 //bloquear todas las teclas
@@ -133,14 +145,17 @@ function estadoPartida(){
     for (let i = 0; i < teclas.length; i++) {
       document.getElementById(teclas[i].id).className = "teclaDeshabilitada";
       teclas[i].disabled = true;
+
     }
   }
 }
+//
+
 //nueva palabra
 const palabraNueva = document.querySelector('#newPalabra');
 const pistaNueva = document.querySelector('#newPista');
 
-function agregarPalabra(){
+function agregarPalabra(e){
   const palabraAgregar = palabraNueva.value.toUpperCase();
   const pistaAgregar = pistaNueva.value;
   if (/^[A-Z]{3,8}$/g.test(palabraAgregar)) {
@@ -149,6 +164,7 @@ function agregarPalabra(){
   } else {
     palabraNueva.value = "";
   }
+  //
   
   if (/^[a-zA-ZÁ_\u00c0-\u00d1]+(\s*[a-zA-ZÁ_\u00c0-\u00d1])+$/g.test(pistaAgregar)) {
     pistaNueva.value = "";
@@ -194,14 +210,80 @@ btnDesistir.addEventListener('click', () => {
   
 });
 
-
-function nodeAlert(){
-  swal({
-    title: "Felicidades!",
-    text: `Lo lograste con una cantidad  de ${contadorIntentos} errores`,
-    icon: "success",
-    timer: 3000,
-    timerProgressBar: true,
-    
-  });
+function pulsarTecla(){
+  window.addEventListener(
+    "keydown",
+    function (e) {
+      letra = e.key.toUpperCase();
+      code = e.keyCode;
+      
+      accederTeclas(letra)
+      
+    },
+    false
+    );
 }
+// function desactivarPulsar(){
+//   document.onkeydown = (e)=> {
+//     if(palabraMostrar == palabraSecreta || contadorIntentos == intentosPosibles){
+//              e.preventDefault();
+//             return false;
+//             console.log('gege')
+//    };
+//     }
+//     return false;
+  
+// }
+// window.onload = function() {
+
+//   var pulsado = false
+//   var letras={}
+//   accederTeclas.addEventListener('keydown',function(e){
+
+//     if(letras[e.key]==undefined){
+//       letras[e.key]=false
+//     }
+//     if(e.key.length==1)
+//     {
+//       if(letras[e.key]){
+//         e.preventDefault()
+//       }else{
+//         letras[e.key]=true
+//       }
+//     }
+//   })
+//   input.addEventListener('keyup',function(e){
+//     letras[e.key]=false
+//   })
+// }
+
+
+// document.addEventListener('keydown', (e) =>{
+//   let letra = e.key.toLocaleUpperCase();
+//   let letraNum = e.keyCode;
+  
+//     let seleccionarTecla = document.querySelector(`#tecla${letra}`)
+
+//   if(palabraSecreta.includes(letra)){
+
+//     for( let i = 0; i < palabraSecreta.length;i++){
+//       if(palabraSecreta[i] == letra ){
+        
+//         aciertos[i] = letra;
+
+//       }
+
+//     }
+//   }else {
+//     seleccionarTecla.classList.add("disableBtn");
+//     seleccionarTecla.disabled = true;
+//     contadorIntentos++;
+//   };
+//   controlJuego()
+//   dibujarLinea();
+//   contadorAhorcado()
+  
+//   console.log(intentosPosibles, contadorIntentos)
+  
+// })
+
