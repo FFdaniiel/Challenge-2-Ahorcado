@@ -40,7 +40,7 @@ btnStart.addEventListener('click', () => {
   palabraVisible.style.display = 'block';
 
   iniciarJuego();
-  
+  pulsarTecla()
 });
 
 //btn - Nuevo juego
@@ -224,4 +224,3 @@ function pulsarTecla(){
     );
 }
 
-pulsarTecla()
