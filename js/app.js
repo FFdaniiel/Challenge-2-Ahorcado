@@ -40,7 +40,7 @@ btnStart.addEventListener('click', () => {
   palabraVisible.style.display = 'block';
 
   iniciarJuego();
-  pulsarTecla()
+  
 });
 
 //btn - Nuevo juego
@@ -104,7 +104,7 @@ function accederTeclas(letra){
   dibujarLinea();
   contadorAhorcado()
   console.log(letra, palabraSecreta, contadorIntentos, aciertos)
-  
+
 }
 
 function resetBtnes() {
@@ -223,67 +223,5 @@ function pulsarTecla(){
     false
     );
 }
-// function desactivarPulsar(){
-//   document.onkeydown = (e)=> {
-//     if(palabraMostrar == palabraSecreta || contadorIntentos == intentosPosibles){
-//              e.preventDefault();
-//             return false;
-//             console.log('gege')
-//    };
-//     }
-//     return false;
-  
-// }
-// window.onload = function() {
 
-//   var pulsado = false
-//   var letras={}
-//   accederTeclas.addEventListener('keydown',function(e){
-
-//     if(letras[e.key]==undefined){
-//       letras[e.key]=false
-//     }
-//     if(e.key.length==1)
-//     {
-//       if(letras[e.key]){
-//         e.preventDefault()
-//       }else{
-//         letras[e.key]=true
-//       }
-//     }
-//   })
-//   input.addEventListener('keyup',function(e){
-//     letras[e.key]=false
-//   })
-// }
-
-
-// document.addEventListener('keydown', (e) =>{
-//   let letra = e.key.toLocaleUpperCase();
-//   let letraNum = e.keyCode;
-  
-//     let seleccionarTecla = document.querySelector(`#tecla${letra}`)
-
-//   if(palabraSecreta.includes(letra)){
-
-//     for( let i = 0; i < palabraSecreta.length;i++){
-//       if(palabraSecreta[i] == letra ){
-        
-//         aciertos[i] = letra;
-
-//       }
-
-//     }
-//   }else {
-//     seleccionarTecla.classList.add("disableBtn");
-//     seleccionarTecla.disabled = true;
-//     contadorIntentos++;
-//   };
-//   controlJuego()
-//   dibujarLinea();
-//   contadorAhorcado()
-  
-//   console.log(intentosPosibles, contadorIntentos)
-  
-// })
-
+pulsarTecla()
