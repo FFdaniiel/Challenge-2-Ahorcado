@@ -210,18 +210,16 @@ btnDesistir.addEventListener('click', () => {
   
 });
 
-function pulsarTecla(){
-  window.addEventListener(
-    "keydown",
-    function (e) {
-      letra = e.key.toUpperCase();
-      code = e.keyCode;
-      
-      accederTeclas(letra)
-      
-    },
-    false
-    );
-}
 
-pulsarTecla()
+window.addEventListener(
+  "keydown",
+  function (e) {
+    letra = e.key.toUpperCase();
+    code = e.keyCode;
+    
+    accederTeclas(letra)
+    
+  },
+  false
+  );
+
