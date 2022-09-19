@@ -120,12 +120,11 @@ function resetBtnes() {
 function controlJuego(){
   if(contadorIntentos == intentosPosibles){
     aciertos = aciertos.toString
+    pista.textContent = `Perdiste, la palabra era: ${palabraSecreta}`
     estadoPartida();
-    pista.textContent = `Perdiste, la palabra era ${palabraSecreta}`
 
   }else{
     if(aciertos.every((item) => item != " ") ) {
-      palabraVisible.innerHTML = (`Felicidades ganaste!`);
       contadorIntentos = 0
       estadoPartida();
       pista.textContent = 'Felicidades Ganaste!'
@@ -174,6 +173,8 @@ function agregarPalabra(e){
   } else {
     pistaNueva.value = "";
   }
+
+
 }
 
 btnAgregar.addEventListener('click', () =>{
@@ -211,6 +212,9 @@ btnDesistir.addEventListener('click', () => {
   
 });
 
+
+
+
 function pulsarTecla(){
   window.addEventListener(
     "keydown",
@@ -226,29 +230,27 @@ function pulsarTecla(){
 }
 
 ///musica
-//elementos seleccionados para la funcion
-window.addEventListener("load",function(){
-	document.querySelector(".fa-play").addEventListener("click",iniciarMusica);
-	document.querySelector(".fa-stop").addEventListener("click",pararMusica);	
-});
 
-//iniciar la musica
-function iniciarMusica(){
+let sonido = document.createElement("audio");
+function crearMusic(){
+	sonido.setAttribute("src","audio/Naptime!.mp3");
+  sonido.setAttribute('autoplay', '');
+	sonido.setAttribute("loop","");
+	document.body.appendChild(sonido);
+}
+crearMusic()
+document.getElementById("play").addEventListener("click", function() {
+  // hacemos play
   document.querySelector(".fa-play").style.display = 'none'
   document.querySelector(".fa-stop").style.display = 'block'
-	let sonido = document.createElement("iframe");
-	sonido.setAttribute("src","audio/Naptime!.mp3 ");
-	document.body.appendChild(sonido);
-	document.querySelector(".fa-play").removeEventListener("click",iniciarMusica);
-}
+  sonido.play();
+});
 
-//para la musica
-function pararMusica(){
+document.getElementById("pause").addEventListener("click", function() {
+  // hacemos pausa
   document.querySelector(".fa-stop").style.display = 'none'
   document.querySelector(".fa-play").style.display = 'block'
-	let iframe = document.getElementsByTagName("iframe");   
-	if (iframe.length > 0){
-		iframe[0].parentNode.removeChild(iframe[0]);
-		document.querySelector(".fa-play").addEventListener("click",iniciarMusica);
-	}
-}
+  sonido.pause();
+});
+
+

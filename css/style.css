@@ -20,9 +20,7 @@ html {
     box-sizing: inherit;
 }
 
-iframe{
-    display: none;
-}
+
 body{
     margin: 0;
     font-family: var(--fuenteGeneral);
@@ -38,17 +36,22 @@ audio{
 .header{
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .btnMusica {
-    padding: 1rem;
-    color: var(--celesteP);
+    padding: .5rem;
     background-color: var(--pinkClaro);
-    border-radius: 25%;
-    font-size: 3rem;
+    border-radius: 50%;
+    
 }
-.fa-stop{
+.fa-play, .fa-stop{
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--celesteP);
+
+}
+.fa-play{
     display: none;
 }
 .gif{
@@ -151,7 +154,6 @@ audio{
 .pistaContenedor h3{
     font-size: 1.5rem;
 }
-
 
 @media (min-width: 768px) {
 
@@ -301,7 +303,8 @@ audio{
     padding: 3rem
 }
 .btnJuego .btn{
-    padding: 1.5rem;
+    margin-top: -2rem;
+    padding: 2.1rem;
     display: inline-block;
 }
 #btnReiniciar:hover , #btnGuardar:hover{
@@ -337,6 +340,7 @@ audio{
 .pantallaAgregar{
     padding: 2rem;
     margin: 0 auto;
+
     
 }
 .inputForm{
@@ -360,7 +364,7 @@ audio{
     flex: 1;
     border-radius: 1rem;
     padding: 1rem;
-    height: 9rem;
+    height: 23rem;
     resize: none;
 }
 
@@ -368,6 +372,16 @@ audio{
     text-align: start;
     color: var(--negri);
 
+}
+@media (min-width: 768px) {
+    .pantallaAgregar{
+        width: 60%;
+    }
+}
+@media (min-width: 1024px) {
+    .pantallaAgregar{
+        width: 40%;
+    }
 }
 
 /* Footer */
@@ -379,10 +393,14 @@ audio{
 }
 .footer-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 .fa-brands{
     padding: 1.5rem;
     color: var(--blanco);
-    font-size: 3rem;
+    font-size: 2.3rem;
+}
+.footer p{
+    color: var(--blanco);
+    font-size: 1.5rem;
 }

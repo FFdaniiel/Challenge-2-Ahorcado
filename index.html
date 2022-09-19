@@ -19,12 +19,13 @@
 <body>
     <header class="header">
         <div class="container-logo">
-            <img src="img/Vector.svg" alt="Logo-Alura">
+            <a href="index.html"><img src="img/Vector.svg" alt="Logo-Alura" ></a>
+            
         </div>
         <section class="gif"></section>
         <section class="btnMusica">
-            <i class="fa-solid fa-play"></i>
-            <i class="fa-solid fa-stop"></i>
+            <i class="fa-solid fa-play " id="play"></i>
+            <i class="fa-solid fa-stop" id="pause"></i>
         </section>
     </header>
     <main>
@@ -82,10 +83,9 @@
                 <form class="inputForm">
                     <input type="text"  name="" id="newPalabra" placeholder="Ingrese una palabra" maxlength="8" minlength="3" autocomplete="off">
                     <span class="maximo-texto">
-                        <!-- <img src="imagenes/Group.svg" alt=""> -->
                         <p>Máx. de 8 letras</p>    
                     </span>
-                    <textarea id="newPista" placeholder="Ingrese una pista"  required></textarea>
+                    <textarea id="newPista" placeholder="Ingrese una pista" required ></textarea>
 
                 </form>
     
@@ -98,6 +98,7 @@
         <footer class="footer">
             <div class="footer-container">
                 <a href="https://www.linkedin.com/in/daniel-alexis-sanduay" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <p>Alura - Challenge 2</p>
                 <a href="https://github.com/FFdaniiel" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </footer>
