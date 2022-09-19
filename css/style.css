@@ -36,20 +36,28 @@ audio{
 }
 /* header */
 .header{
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
 }
 
 .btnMusica {
-    padding: 1.3rem;
+    padding: 1rem;
     color: var(--celesteP);
     background-color: var(--pinkClaro);
-    border-radius: 45%;
+    border-radius: 25%;
     font-size: 3rem;
 }
 .fa-stop{
     display: none;
+}
+.gif{
+    position: relative;
+    width: 65%;
+    height: 60px;
+    border-radius: 2rem;
+    background-size: contain;
+    background-image: url(https://thumbs.gfycat.com/ExaltedAchingDogwoodclubgall-size_restricted.gif);
 }
 /* main principal */
 .pantalla-inicio{
@@ -81,6 +89,7 @@ audio{
     background: var(--pinkClaro);
     font-size: 1.2rem;
 }
+
 @media (min-width: 768px) {
     body{
         height: 100vh;
@@ -97,6 +106,7 @@ audio{
         background: var(--pink);
         font-size: 1.5rem;
     }
+    
 }
 @media (min-width: 1024px) {
     
@@ -105,13 +115,24 @@ audio{
         font-size: 1.4rem;
     }
 
+    .gif{
+        width: 50%;
+    }
+    .gif{
+        width: 85%;
+        height: 60px;
+    }
 }
+/*  */
+
+
 /* main | Ahorcado */
 
 .pantalla-juego{
     margin: 0 auto;
-    width: 100%;
-    padding: 2rem;
+    width: 80%;
+    padding: 1rem;
+    margin-top: -3rem;
 }
 .pantalla-juego canvas{
     margin: 0 auto;
@@ -166,13 +187,19 @@ audio{
         margin-top: -2rem;
     }
 }
+
+#pista{
+    color: var(--negri);
+}
 /* Main teclado */
 .teclado{
-
-    width: 100%;
-    padding: 3rem;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
     background-color: var(--pinkClaro);
     border-radius: 2rem;
+    margin-top:  -4rem;
 }
 
 .btnTeclado {
@@ -269,8 +296,8 @@ audio{
 }
 /* Botones ahorcado */
 .btnJuego{
-
-    margin: 0 auto;
+    display: flex;
+    width: 100%;
     padding: 3rem
 }
 .btnJuego .btn{
@@ -341,4 +368,21 @@ audio{
     text-align: start;
     color: var(--negri);
 
+}
+
+/* Footer */
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: var(--negri);
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+}
+.fa-brands{
+    padding: 1.5rem;
+    color: var(--blanco);
+    font-size: 3rem;
 }

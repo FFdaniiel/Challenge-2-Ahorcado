@@ -6,6 +6,7 @@ const guardarErrores = document.querySelector('.errores');
 const teclado = document.querySelector('.teclado');
 const palabraVisible = document.querySelector('#palabraSecreta')
 const pista = document.querySelector('#pista');
+const musica = document.querySelector('#music');
 
 //btn extra
 const btnStart = document.querySelector('#btnStart');
@@ -97,8 +98,6 @@ function accederTeclas(letra){
     seleccionarTecla.classList.add("disableBtn");
     seleccionarTecla.disabled = true;
     contadorIntentos++;
-    
-;
   }
   controlJuego()
   dibujarLinea();
@@ -120,14 +119,16 @@ function resetBtnes() {
 //contador de juego
 function controlJuego(){
   if(contadorIntentos == intentosPosibles){
-    palabraVisible.innerHTML = (`Perdiste, La palabra era: ${palabraSecreta}`);
     aciertos = aciertos.toString
     estadoPartida();
+    pista.textContent = `Perdiste, la palabra era ${palabraSecreta}`
+
   }else{
     if(aciertos.every((item) => item != " ") ) {
       palabraVisible.innerHTML = (`Felicidades ganaste!`);
       contadorIntentos = 0
       estadoPartida();
+      pista.textContent = 'Felicidades Ganaste!'
     }
   }
   
@@ -228,7 +229,7 @@ function pulsarTecla(){
 //elementos seleccionados para la funcion
 window.addEventListener("load",function(){
 	document.querySelector(".fa-play").addEventListener("click",iniciarMusica);
-	document.querySelector(".fa-stop").addEventListener("click",pararMusica);			
+	document.querySelector(".fa-stop").addEventListener("click",pararMusica);	
 });
 
 //iniciar la musica
@@ -236,7 +237,7 @@ function iniciarMusica(){
   document.querySelector(".fa-play").style.display = 'none'
   document.querySelector(".fa-stop").style.display = 'block'
 	let sonido = document.createElement("iframe");
-	sonido.setAttribute("src","audio/Naptime!.mp3");
+	sonido.setAttribute("src","audio/Naptime!.mp3 ");
 	document.body.appendChild(sonido);
 	document.querySelector(".fa-play").removeEventListener("click",iniciarMusica);
 }
