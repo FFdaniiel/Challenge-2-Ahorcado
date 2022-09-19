@@ -233,7 +233,7 @@ function pulsarTecla(){
 
 let sonido = document.createElement("audio");
 function crearMusic(){
-	sonido.setAttribute("src","audio/Naptime!.mp3");
+  sonido.setAttribute("src","audio/Naptime!.mp3");
   sonido.setAttribute('autoplay', '');
 	sonido.setAttribute("loop","");
 	document.body.appendChild(sonido);

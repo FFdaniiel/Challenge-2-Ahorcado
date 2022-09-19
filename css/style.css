@@ -303,7 +303,7 @@ audio{
     padding: 3rem
 }
 .btnJuego .btn{
-    margin-top: -2rem;
+    margin-top: -.2rem;
     padding: 2.1rem;
     display: inline-block;
 }
