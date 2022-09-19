@@ -236,9 +236,9 @@ function crearMusic(){
   sonido.setAttribute("src","audio/Naptime!.mp3");
   sonido.setAttribute('autoplay', '');
 	sonido.setAttribute("loop","");
-	document.body.appendChild(sonido);
+	musica.appendChild(sonido);
 }
-crearMusic()
+
 document.getElementById("play").addEventListener("click", function() {
   // hacemos play
   document.querySelector(".fa-play").style.display = 'none'
@@ -253,4 +253,4 @@ document.getElementById("pause").addEventListener("click", function() {
   sonido.pause();
 });
 
-
+crearMusic()
