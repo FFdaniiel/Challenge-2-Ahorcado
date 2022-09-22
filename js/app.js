@@ -231,8 +231,8 @@ btnDesistir.addEventListener('click', () => {
 ///musica
 let sonido = document.createElement("audio");
   
-sonido.setAttribute("src","audio/Naptime!.mp3");
 sonido.setAttribute("loop","loop");
+sonido.setAttribute("src","audio/Naptime!.mp3");
 musica.appendChild(sonido);
 
 document.getElementById("play").addEventListener("click", function() {
