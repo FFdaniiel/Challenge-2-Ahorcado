@@ -42,17 +42,17 @@ function pulsarTecla(){
 
   document.getElementById("play").addEventListener("click", function() {
     // hacemos play
-    sonido.play();
     document.querySelector(".fa-play").style.display = 'none'
     document.querySelector(".fa-stop").style.display = 'block'
+    sonido.play();
   });
   
 
 document.getElementById("pause").addEventListener("click", function() {
   // hacemos pausa
-  sonido.pause();
   document.querySelector(".fa-stop").style.display = 'none'
   document.querySelector(".fa-play").style.display = 'block'
+  sonido.pause();
 });
   
   
