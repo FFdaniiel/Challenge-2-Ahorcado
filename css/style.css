@@ -55,9 +55,10 @@ audio{
     display: none;
 }
 .gif{
+    margin: 0 auto;
     position: relative;
-    width: 65%;
-    height: 60px;
+    width: 54%;
+    height: 50px;
     border-radius: 2rem;
     background-size: contain;
     background-image: url(https://thumbs.gfycat.com/ExaltedAchingDogwoodclubgall-size_restricted.gif);
@@ -65,7 +66,7 @@ audio{
 /* main principal */
 .pantalla-inicio{
     margin: 0 auto;
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 2rem;
     background: var(--celesteP);
 }
@@ -109,6 +110,13 @@ audio{
         background: var(--pink);
         font-size: 1.5rem;
     }
+    .gif{
+        width: 50%;
+    }
+    .gif{
+        width: 75%;
+        height: 60px;
+    }
     
 }
 @media (min-width: 1024px) {
@@ -133,7 +141,7 @@ audio{
 
 .pantalla-juego{
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     padding: 1rem;
     margin-top: -3rem;
 }
@@ -160,7 +168,7 @@ audio{
     .pantalla-juego canvas{
         display: block;
         margin: 0 auto;
-        width: 70%;
+        width: 60%;
     }
     .pistaContenedor{
         display: block;
@@ -179,7 +187,7 @@ audio{
      .pantalla-juego canvas{
         display: block;
         margin:  0 auto;
-        width: 30%;
+        width: 25%;
 
     }
     .pistaContenedor{
@@ -196,12 +204,12 @@ audio{
 /* Main teclado */
 .teclado{
     display: flex;
-    width: 90%;
+    width: 83%;
     margin: 0 auto;
     padding: 1rem;
-    background-color: var(--pinkClaro);
     border-radius: 2rem;
     margin-top:  -4rem;
+    background-color: var(--pinkClaro);
 }
 
 .btnTeclado {
@@ -270,7 +278,7 @@ audio{
 @media (min-width: 768px) {
     .teclado{
         margin: 0 auto;
-        width: 70%;
+        width: 53%;
     }
     .btnTeclado{
         padding: 1rem 1.4rem;
@@ -285,7 +293,7 @@ audio{
 @media (min-width: 1024px) {
     .teclado{
         margin: 0 auto;
-        width: 40%;
+        width: 35%;
     }
     .btnTeclado{
         padding: 1rem 1.4rem;
@@ -315,7 +323,7 @@ audio{
 @media (min-width: 768px) {
     .btnJuego{
         margin: 0 auto;
-        width: 70%;
+        width: 60%;
     }
     .btnJuego .btn{
         width: 40%;
@@ -326,7 +334,7 @@ audio{
 @media (min-width: 1024px) {
     .btnJuego{
         margin: 0 auto;
-        width: 30%;
+        width: 40%;
     }
     .btnJuego .btn{
         padding: 2rem;
