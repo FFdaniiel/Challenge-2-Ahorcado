@@ -51,7 +51,7 @@ audio{
     color: var(--celesteP);
 
 }
-.fa-stop{
+.fa-play{
     display: none;
 }
 .gif{
@@ -179,7 +179,7 @@ audio{
      .pantalla-juego canvas{
         display: block;
         margin:  0 auto;
-        width: 40%;
+        width: 30%;
 
     }
     .pistaContenedor{

@@ -18,7 +18,52 @@ const btnDesistir = document.querySelector('#btnDesistir')
 //agregar
 const btnGuardar = document.querySelector('#btnGuardar')
 const btnCancelar = document.querySelector('#btnCancelar')
+//
+function pulsarTecla(){
+  window.addEventListener(
+    "keydown",
+    function (e) {
+      letra = e.key.toUpperCase();
+      code = e.keyCode;
+      
+      accederTeclas(letra)
+      console.log(code)
+    },
+    false
+    );
+}
 
+///musica
+
+function agregarMusica(){
+
+  let sonido = document.createElement("audio");
+  
+    sonido.setAttribute("src","audio/Naptime!.mp3");
+    sonido.setAttribute('autoplay', 'autoplay');
+    sonido.setAttribute("loop","loop");
+    musica.appendChild(sonido);
+    
+    document.getElementById("play").addEventListener("click", function() {
+      // hacemos play
+      document.querySelector(".fa-play").style.display = 'none'
+      document.querySelector(".fa-stop").style.display = 'block'
+      sonido.play();
+    });
+    
+  
+  document.getElementById("pause").addEventListener("click", function() {
+    // hacemos pausa
+    document.querySelector(".fa-stop").style.display = 'none'
+    document.querySelector(".fa-play").style.display = 'block'
+    sonido.pause();
+  });
+  }
+
+  agregarMusica()
+  
+
+  
 //
 const intentosPosibles = 6;
 let contadorIntentos = 0;
@@ -214,39 +259,6 @@ btnDesistir.addEventListener('click', () => {
 
 
 
-function pulsarTecla(){
-  window.addEventListener(
-    "keydown",
-    function (e) {
-      letra = e.key.toUpperCase();
-      code = e.keyCode;
-      
-      accederTeclas(letra)
-      console.log(code)
-    },
-    false
-    );
-}
 
-///musica
-let sonido = document.createElement("audio");
-
-  sonido.setAttribute("src","audio/Naptime!.mp3");
-  sonido.setAttribute('autoplay', 'autoplay');
-	sonido.setAttribute("loop","loop");
-	musica.appendChild(sonido);
-
-document.getElementById("play").addEventListener("click", function() {
-  // hacemos play
-  document.querySelector(".fa-play").style.display = 'none'
-  document.querySelector(".fa-stop").style.display = 'block'
-  sonido.play();
-});
-
-document.getElementById("pause").addEventListener("click", function() {
-  // hacemos pausa
-  document.querySelector(".fa-stop").style.display = 'none'
-  document.querySelector(".fa-play").style.display = 'block'
-  sonido.pause();
-});
-
+  
+  
