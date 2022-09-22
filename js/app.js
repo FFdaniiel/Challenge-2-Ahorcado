@@ -42,16 +42,16 @@ function pulsarTecla(){
 
   document.getElementById("play").addEventListener("click", function() {
     // hacemos play
-    document.querySelector(".fa-play").style.display = 'none'
     sonido.play();
+    document.querySelector(".fa-play").style.display = 'none'
     document.querySelector(".fa-stop").style.display = 'block'
   });
   
 
 document.getElementById("pause").addEventListener("click", function() {
   // hacemos pausa
-  document.querySelector(".fa-stop").style.display = 'none'
   sonido.pause();
+  document.querySelector(".fa-stop").style.display = 'none'
   document.querySelector(".fa-play").style.display = 'block'
 });
   
