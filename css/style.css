@@ -51,7 +51,7 @@ audio{
     color: var(--celesteP);
 
 }
-.fa-play{
+.fa-stop{
     display: none;
 }
 .gif{
