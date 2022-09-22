@@ -40,10 +40,9 @@ function agregarMusica(){
   let sonido = document.createElement("audio");
   
     sonido.setAttribute("src","audio/Naptime!.mp3");
-    sonido.setAttribute('autoplay', 'autoplay');
     sonido.setAttribute("loop","loop");
     musica.appendChild(sonido);
-    
+
     document.getElementById("play").addEventListener("click", function() {
       // hacemos play
       document.querySelector(".fa-play").style.display = 'none'
@@ -61,8 +60,6 @@ function agregarMusica(){
   }
 
   agregarMusica()
-  
-
   
 //
 const intentosPosibles = 6;
