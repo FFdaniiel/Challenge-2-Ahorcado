@@ -33,20 +33,6 @@ function pulsarTecla(){
     );
 }
 
-///musica
-  let sonido = document.createElement("audio");
-  
-    sonido.setAttribute("src","audio/Naptime!.mp3");
-    sonido.setAttribute("loop","loop");
-    musica.appendChild(sonido);
-
-  document.getElementById("play").addEventListener("click", function() {
-    // hacemos play
-    document.querySelector(".fa-play").style.display = 'none'
-    document.querySelector(".fa-stop").style.display = 'block'
-    sonido.play();
-  });
-  
 
 document.getElementById("pause").addEventListener("click", function() {
   // hacemos pausa
@@ -249,6 +235,20 @@ btnDesistir.addEventListener('click', () => {
 });
 
 
+
+///musica
+let sonido = document.createElement("audio");
+  
+sonido.setAttribute("src","audio/Naptime!.mp3");
+sonido.setAttribute("loop","loop");
+musica.appendChild(sonido);
+
+document.getElementById("play").addEventListener("click", function() {
+// hacemos play
+document.querySelector(".fa-play").style.display = 'none'
+document.querySelector(".fa-stop").style.display = 'block'
+sonido.play();
+});
 
 
 
