@@ -18,13 +18,6 @@ const btnDesistir = document.querySelector('#btnDesistir')
 //agregar
 const btnGuardar = document.querySelector('#btnGuardar')
 const btnCancelar = document.querySelector('#btnCancelar')
-//
-let sonido = document.createElement("audio");
-
-  sonido.setAttribute("src","audio/Naptime!.mp3");
-  sonido.setAttribute('autoplay', 'autoplay');
-	sonido.setAttribute("loop","loop");
-	musica.appendChild(sonido);
 
 //
 const intentosPosibles = 6;
@@ -236,7 +229,12 @@ function pulsarTecla(){
 }
 
 ///musica
+let sonido = document.createElement("audio");
 
+  sonido.setAttribute("src","audio/Naptime!.mp3");
+  sonido.setAttribute('autoplay', 'autoplay');
+	sonido.setAttribute("loop","loop");
+	musica.appendChild(sonido);
 
 document.getElementById("play").addEventListener("click", function() {
   // hacemos play
