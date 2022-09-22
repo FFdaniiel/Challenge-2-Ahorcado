@@ -33,14 +33,6 @@ function pulsarTecla(){
     );
 }
 
-
-document.getElementById("pause").addEventListener("click", function() {
-  // hacemos pausa
-  document.querySelector(".fa-stop").style.display = 'none'
-  document.querySelector(".fa-play").style.display = 'block'
-  sonido.pause();
-});
-  
   
 //
 const intentosPosibles = 6;
@@ -250,7 +242,13 @@ document.querySelector(".fa-stop").style.display = 'block'
 sonido.play();
 });
 
-
+document.getElementById("pause").addEventListener("click", function() {
+  // hacemos pausa
+  document.querySelector(".fa-stop").style.display = 'none'
+  document.querySelector(".fa-play").style.display = 'block'
+  sonido.pause();
+});
+  
 
   
   
