@@ -34,33 +34,26 @@ function pulsarTecla(){
 }
 
 ///musica
-
-function agregarMusica(){
-
   let sonido = document.createElement("audio");
   
     sonido.setAttribute("src","audio/Naptime!.mp3");
     sonido.setAttribute("loop","loop");
     musica.appendChild(sonido);
 
-  }
-  agregarMusica()
-  
   document.getElementById("play").addEventListener("click", function() {
     // hacemos play
     document.querySelector(".fa-play").style.display = 'none'
-    document.querySelector(".fa-stop").style.display = 'block'
     sonido.play();
+    document.querySelector(".fa-stop").style.display = 'block'
   });
   
 
 document.getElementById("pause").addEventListener("click", function() {
   // hacemos pausa
   document.querySelector(".fa-stop").style.display = 'none'
-  document.querySelector(".fa-play").style.display = 'block'
   sonido.pause();
+  document.querySelector(".fa-play").style.display = 'block'
 });
-  
   
   
 //
