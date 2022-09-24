@@ -238,7 +238,7 @@ function pulsarTecla(){
     musica.appendChild(sonido);
 
 
-    document.getElementById("play").addEventListener("click", function() {
+    document.querySelector("#play").addEventListener("click", function() {
       // hacemos play
       document.querySelector(".fa-play").style.display = 'none'
       document.querySelector(".fa-stop").style.display = 'block'
@@ -247,7 +247,7 @@ function pulsarTecla(){
     
 
 
-  document.getElementById("pause").addEventListener("click", function() {
+  document.querySelector("#pause").addEventListener("click", function() {
     // hacemos pausa
     document.querySelector(".fa-stop").style.display = 'none'
     document.querySelector(".fa-play").style.display = 'block'
