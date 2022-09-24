@@ -229,7 +229,6 @@ function pulsarTecla(){
 }
 
 ///musica
-function agregarMusica(){
 
   let sonido = document.createElement("audio");
   
@@ -237,30 +236,25 @@ function agregarMusica(){
     sonido.setAttribute('autoplay', 'autoplay');
     sonido.setAttribute("loop","loop");
     musica.appendChild(sonido);
-    IniciarMusica()
-    ParaMusica()
-  }
-  function IniciarMusica(){
-  
+
+
     document.getElementById("play").addEventListener("click", function() {
       // hacemos play
       document.querySelector(".fa-play").style.display = 'none'
       document.querySelector(".fa-stop").style.display = 'block'
-      sonido.play();
+      sonido.play()
     });
     
-  }
-  function ParaMusica(){
-  
+
+
   document.getElementById("pause").addEventListener("click", function() {
     // hacemos pausa
     document.querySelector(".fa-stop").style.display = 'none'
     document.querySelector(".fa-play").style.display = 'block'
     sonido.pause();
   });
-  }
   
-agregarMusica()
+  
   
   
   
